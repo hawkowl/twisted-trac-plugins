@@ -57,7 +57,7 @@ class VersionInformation(object):
             base=self.version.base(), md5="")
         filename = path.split('/')[-1]
         for entry in lines[3:lines.index(sep)]:
-            entry = entry.rstrip('\n').split('  ')
+            entry = entry.rstrip('\n').split(' ')
             if entry[-1] == filename:
                 return entry[0]
         return ''
